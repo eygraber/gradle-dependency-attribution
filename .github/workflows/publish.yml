@@ -66,6 +66,7 @@ jobs:
         id: create_tag
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.PUSH_PAT }}
           script: |
             const {GIT_HEAD} = process.env
             github.rest.git.createRef({
