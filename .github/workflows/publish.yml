@@ -14,6 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PUSH_PAT }}
 
       - name: Generate versions
         uses: HardNorth/github-version-generate@v1.3.0
