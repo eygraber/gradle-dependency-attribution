@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package eygraber.dependency.attribution;
+
+option java_package = "com.eygraber.dependency.attribution";
+
+message License {
+  uint32 urlIndex = 1;
+  uint32 nameIndex = 2;
+}

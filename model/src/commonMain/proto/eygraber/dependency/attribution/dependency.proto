@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package eygraber.dependency.attribution;
+
+option java_package = "com.eygraber.dependency.attribution";
+
+import "eygraber/dependency/attribution/license.proto";
+
+message Dependency {
+  string coordinates = 1;
+
+  repeated eygraber.dependency.attribution.License licenseIndices = 2;
+  repeated uint32 developerNamesIndices = 4;
+  uint32 scmUrlIndex = 5;
+  optional string pomName = 6;
+  optional string pomDescription = 7;
+}

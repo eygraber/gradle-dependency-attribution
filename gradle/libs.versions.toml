@@ -1,0 +1,47 @@
+[versions]
+android-plugin = "8.0.2"
+
+android-sdk-compile = "33"
+android-sdk-target = "33"
+android-sdk-min = "24"
+
+detekt = "1.23.0"
+detektEygraber = "1.0.11"
+
+dokka = "1.8.20"
+
+gradleConventions = "0.0.33"
+
+jdk = "17"
+
+kotlin = "1.8.21"
+
+ktlint = "0.49.1"
+
+publish = "0.25.2"
+
+[plugins]
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+gradleConventions = { id = "com.eygraber.conventions", version.ref = "gradleConventions" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+publish = { id = "com.vanniktech.maven.publish", version.ref = "publish" }
+wire = { id = "com.squareup.wire", version = "4.7.2" }
+
+[libraries]
+buildscript-android = { module = "com.android.tools.build:gradle", version.ref = "android-plugin" }
+buildscript-androidCacheFix = { module = "gradle.plugin.org.gradle.android:android-cache-fix-gradle-plugin", version = "2.7.1" }
+buildscript-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+buildscript-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
+buildscript-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+buildscript-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "publish" }
+
+detektEygraber-formatting = { module = "com.eygraber.detekt.rules:formatting", version.ref = "detektEygraber" }
+detektEygraber-style = { module = "com.eygraber.detekt.rules:style", version.ref = "detektEygraber" }
+
+kotlinx-serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1"
+
+# not actually used; just here so renovate picks it up
+ktlint = { module = "com.pinterest.ktlint:ktlint-bom", version.ref = "ktlint" }
+
+mavenModel = "org.apache.maven:maven-model:3.9.2"
